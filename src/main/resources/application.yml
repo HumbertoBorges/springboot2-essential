@@ -1,0 +1,32 @@
+server:
+  port: 8081
+  error:
+    include-stacktrace: on_trace_param
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/anime?user=developer&createDatabaseIfNotExist=true&serverTimezone=UTC
+    username: developer
+    password: 123456
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: DEBUG
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+info:
+  app: Spring Boot 2 Essentials By Humberto
+  website: no futuro vai ter algum
+  github: https://github.com/humberto/springboot2-essentials
